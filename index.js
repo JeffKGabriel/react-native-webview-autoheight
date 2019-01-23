@@ -21,6 +21,10 @@ import {
 
 const injectedScript = function() {
   function waitForBridge() {
+    console.log('document.documentElement.clientHeight',document.documentElement.clientHeight);
+    console.log('document.documentElement.scrollHeight',document.documentElement.scrollHeight);
+    console.log('document.body.clientHeight',document.body.clientHeight);
+    console.log('document.body.scrollHeight',document.body.scrollHeight);
     if (window.postMessage.length !== 1){
       setTimeout(waitForBridge, 200);
     }
